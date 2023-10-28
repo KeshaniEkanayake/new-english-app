@@ -1,0 +1,11 @@
+.background1{
+    /* background-image: url(../assets/images/backgrounds/proflevel-background.png); */
+    background-image: url(../images/backgrounds/background.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    /* Center the background image */
+    background-position: center ; 
+    min-height: 100vh; 
+    display: flex;    
+    
+}
