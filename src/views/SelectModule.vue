@@ -17,33 +17,36 @@
           <div class="nested-grid">
             <!-- Content for the first column in the second row -->
             
-            <!-- reading card-->
-            <CardModuleSelection 
-                    cardHeading="Reading" 
-                    :imageSrc="readingImage"
-                    :link="ReadingContentPath"
-            />
+            <div class="card-container">
+              <!-- reading card-->
+                <CardModuleSelection 
+                      cardHeading="Reading" 
+                      :imageSrc="readingImage"
+                      :link="ReadingContentPath"
+              />
 
-            <!-- listning card -->
-            <CardModuleSelection 
-                    cardHeading="Listnening" 
-                    :imageSrc="listeningImage"
-                    :link="ListningContentPath"
-            />
+              <!-- listning card -->
+              <CardModuleSelection 
+                      cardHeading="Listnening" 
+                      :imageSrc="listeningImage"
+                      :link="ListningContentPath"
+              />
 
-            <!-- writing card -->
-            <CardModuleSelection 
-                    cardHeading="Writing" 
-                    :imageSrc="writingImage"
-                    :link="WritingContentPath"
-            />
+              <!-- writing card -->
+              <CardModuleSelection 
+                      cardHeading="Writing" 
+                      :imageSrc="writingImage"
+                      :link="WritingContentPath"
+              />
 
-            <!-- grammar card-->
-            <CardModuleSelection 
-                    cardHeading="Grammar" 
-                    :imageSrc="grammarImage"
-                    :link="GrammarContentPath"
-            />
+              <!-- grammar card-->
+              <CardModuleSelection 
+                      cardHeading="Grammar" 
+                      :imageSrc="grammarImage"
+                      :link="GrammarContentPath"
+              />
+            </div>
+            
             <AvatarOne/>
           </div>
           
@@ -129,19 +132,20 @@
   grid-template-columns: 1fr 1fr; /* Two equal-width columns */
   /* Gap between columns */
   /* gap: 10px;  */
-}
-.row {
-  /* Styles for rows, if needed */
+  margin-top: 10%; /* Add top margin to move the second row down */
 }
 
-.column {
-  /* Styles for columns, if needed */
-}
 
 /* Use em units for font size to make it relative */
 .text-container {
     font-size: 1em;
     /* locate the comment shape 10% away from the left margin */
     left: 10%;
+  }
+
+  .card-container{
+    display: flex;
+    margin-left: 10%; /* Add a left margin to move the card-container to the right */
+    gap: 5vh;
   }
 </style>
