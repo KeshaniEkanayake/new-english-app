@@ -5,7 +5,7 @@
       <n-card size="small" hoverable class="card-style">
         <div class="card-content">
           <h3>{{ cardHeading }}</h3>
-          <img :src="imageSrc" />
+          <img :src="imageSrc" class="responsive-image"/>
           <br>
         </div>
       </n-card>
@@ -48,13 +48,42 @@
       justify-content: center;
       text-align: center; /* Optional, to center-align the text */
       /* padding: 10px; */
+      color:#fff;
       
     }
   
     .card-style{
           border-radius: 1.25rem;
           background-color: #0C4F80;
-          width: 90%;
-          height: 90%;
-      }
+          width: 25vh;
+          height: 40vh;
+
+          margin: 0 auto; /* Center the card horizontally */
+          box-sizing: border-box; /* Include padding in the total width/height */
+        transition: all 0.3s; /* Add smooth transition effect */
+      
+    }
+
+    .responsive-image {
+        max-width: 100%; /* Ensure the image does not exceed its container's width */
+        height: auto; /* Maintain the aspect ratio */
+    }
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    /* Adjust card styles for screens with a maximum width of 768px */
+    .card-style {
+      width: 80%;
+    }
+  }
+
+
+  @media screen and (max-width: 576px) {
+    /* Adjust card styles for screens with a maximum width of 576px */
+    .card-style {
+      width: 70%;
+    }
+  }
+   
   </style>
