@@ -101,7 +101,7 @@
   
   <style scoped>
     .top-logo{
-      width: 100%; /* Adjust the width as needed */
+      width: 60%; /* Adjust the width as needed */
       height: auto; /* To maintain the aspect ratio */
       margin-bottom: 10px; /* Add margin to separate the image from the navigation content */
   

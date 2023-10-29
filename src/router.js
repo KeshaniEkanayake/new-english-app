@@ -6,12 +6,23 @@ import Home from './views/Home.vue';
 import About from './views/About.vue';
 
 import SelectProfLevel from './views/SelectProfLevel.vue'
+import SelectModule from './views/SelectModule.vue'
+
+
+// import TestView from './views/TestView.vue'
+
 
 const routes = [
   { path: '/Home', component: Home },
   { path: '/About', component: About },
 
-  { path: '/SelectProfLevel', component: SelectProfLevel }
+  { path: '/SelectProfLevel', component: SelectProfLevel },
+  { path: '/SelectModule', component: SelectModule },
+
+
+  // { path: '/TestView', component: TestView }
+
+
 ];
 
 const router = createRouter({
