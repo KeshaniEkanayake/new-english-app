@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="comment-shape-container">
     <img src="../assets/images/comment-shape.png" alt="comment-shaped image" class="comment-shape">
     <div class="text-container">
         <!-- used to add dynamic text to the image -->
@@ -15,10 +15,13 @@ export default {
 </script>
 
 <style scoped>
+.comment-shape-container {
+  position: relative;
+  
+}
 .comment-shape {
-  position: absolute; /* Make the container a positioning context */
-  right: 20%;
-  width: 60%;
+  /* Make the image responsive to its container */
+  width: 100%;
   height: auto;
   /* send the shape image to the back */
   z-index: 0;
@@ -27,16 +30,20 @@ export default {
 
 .text-container {
   position: absolute;
-  width: 100%; /* Make the text container cover the entire shape */
-  text-align: center center; /* Center the text horizontally */
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center; /* Center the text horizontally */
+/* Make the text container cover the entire shape */
+  width: 60%; 
+  
   /* Add any styles for the text container here */
-
-
-  font-family: sans-serif; /* Replace "Your Font Family" with your desired font family */
-  font-size: 200%; /* Adjust the font size as needed */
+  font-size: 2em; /* Adjust the font size as needed */
   font-weight: 1000;
   color: #fff; /* Set the text color */
 
+  padding: 1em;
 }
 
 </style>

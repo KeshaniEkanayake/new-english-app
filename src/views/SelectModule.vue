@@ -5,7 +5,7 @@
       <div class="container">
         <!-- first row -->
         <div class="row">
-          <CommentShape>
+          <CommentShape class="text-container">
             <!-- Add dynamic text content here with a line break -->
             <div v-html="dynamicText"></div>
           </CommentShape>
@@ -16,9 +16,34 @@
         <div class="row">
           <div class="nested-grid">
             <!-- Content for the first column in the second row -->
-            <h1>1</h1>
+            
+            <!-- reading card-->
+            <CardModuleSelection 
+                    cardHeading="Reading" 
+                    :imageSrc="readingImage"
+                    :link="ReadingContentPath"
+            />
 
-            <!-- Content for the second column in the second row -->
+            <!-- listning card -->
+            <CardModuleSelection 
+                    cardHeading="Listnening" 
+                    :imageSrc="listeningImage"
+                    :link="ListningContentPath"
+            />
+
+            <!-- writing card -->
+            <CardModuleSelection 
+                    cardHeading="Writing" 
+                    :imageSrc="writingImage"
+                    :link="WritingContentPath"
+            />
+
+            <!-- grammar card-->
+            <CardModuleSelection 
+                    cardHeading="Grammar" 
+                    :imageSrc="grammarImage"
+                    :link="GrammarContentPath"
+            />
             <AvatarOne/>
           </div>
           
@@ -38,16 +63,52 @@
 
     import "../assets/css/main.css"
 
+
+    import CardModuleSelection from "@/components/CardModuleSelection.vue";
+    import listeningImage from "@/assets/images/listening-vector.png";
+    import readingImage from "@/assets/images/reading-vector.png";
+    import writingImage from "@/assets/images/writing-vector.png";
+    import grammarImage from "@/assets/images/grammar-vector.png";
+
+
     export default defineComponent({
         components:{
           SideNavigation, 
-          CommentShape, AvatarOne
+          CommentShape, AvatarOne,
+
+          CardModuleSelection,
             },
 
             data() {
               return {
-                dynamicText: "Select the module <br> you want to learn",
+                dynamicText: "Select the module you want to learn",
+
+                // related to card
+                 // needs to display images
+                listeningImage: listeningImage,
+                readingImage: readingImage,
+                grammarImage: grammarImage,
+                writingImage: writingImage,
               };
+            },
+
+            // ralted to card
+            computed: {       
+              ReadingContentPath() {
+              return '/Basic/Listining/lesson1'; // Modify with your path that you given in the route.vue file under "path:" variable
+              },
+
+              ListningContentPath() {
+              return '/Basic/Listining/lesson1'; // Modify with your path that you given in the route.vue file under "path:" variable
+              },
+
+              WritingContentPath() {
+              return '/Basic/Listining/lesson1'; // Modify with your path that you given in the route.vue file under "path:" variable
+              },
+
+              GrammarContentPath() {
+              return '/Basic/Listining/lesson1'; // Modify with your path that you given in the route.vue file under "path:" variable
+              },
             },
         })
 
@@ -76,4 +137,11 @@
 .column {
   /* Styles for columns, if needed */
 }
+
+/* Use em units for font size to make it relative */
+.text-container {
+    font-size: 1em;
+    /* locate the comment shape 10% away from the left margin */
+    left: 10%;
+  }
 </style>
