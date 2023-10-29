@@ -18,6 +18,8 @@ export default {
 .comment-shape {
   position: absolute; /* Make the container a positioning context */
   right: 20%;
+  width: 60%;
+  height: auto;
   /* send the shape image to the back */
   z-index: 0;
 
@@ -26,7 +28,7 @@ export default {
 .text-container {
   position: absolute;
   width: 100%; /* Make the text container cover the entire shape */
-  text-align: center; /* Center the text horizontally */
+  text-align: center center; /* Center the text horizontally */
   /* Add any styles for the text container here */
 
 

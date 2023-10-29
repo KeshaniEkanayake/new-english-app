@@ -15,9 +15,10 @@
   .avatar-container {
     position: absolute;
     top: 20%;
-    right: 2%; /* Adjust the left position as needed */
+  /* Adjust the left position as needed */
+    right: 2%; 
     /* Add any styles for the text container here */
-    width: 30%;
+    width: 28%;
   
   }
   
