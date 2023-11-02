@@ -1,13 +1,16 @@
+<!-- the main avatar who guides the student -->
 <template>
     <div >
-      <img src="../assets/images/avatars/avatarOne.png" alt="AvatarOne" class="avatar-container">
-      
+      <img :src="imageSource" alt="AvatarImage" class="avatar-container">
     </div>
   </template>
   
+
   <script>
   export default {
-  
+    props: {
+        imageSource: String, // Define a prop to receive the image source
+    },
   }
   </script>
   

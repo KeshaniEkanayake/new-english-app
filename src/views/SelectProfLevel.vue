@@ -31,7 +31,7 @@
                         </a>
                     </div>
 
-                    <AvatarOne/>
+                    <AvatarMain :imageSource="avatarImageSource"/>
                     
                 </div>
             </div>    
@@ -46,7 +46,7 @@
 import { defineComponent } from "vue"
 import SideNavigation from "@/components/SideNavigation.vue"
 import CommentShape from "@/components/CommentShape.vue"
-import AvatarOne from "@/components/AvatarOne.vue"
+import AvatarMain from "@/components/AvatarMain.vue"
 
 
 import "../assets/css/main.css"
@@ -56,13 +56,17 @@ import "../assets/css/main.css"
         components:{
             SideNavigation,
             CommentShape,
-            AvatarOne,
+            AvatarMain,
         },
 
         data() {
           return {
             dynamicText: "Select the module you want to learn",
-          };
+          
+            // related to avatar 
+            avatarImageSource: require("@/assets/images/avatars/avatarOne.png"), // Set the image source dynamically
+
+        };
         },
     })
 </script>

@@ -47,7 +47,7 @@
               />
             </div>
             
-            <AvatarOne/>
+            <AvatarMain :imageSource="avatarImageSource"/>
           </div>  
         </div>
       </div>
@@ -58,7 +58,7 @@
 <script>
     import { defineComponent } from "vue"
     import CommentShape from "@/components/CommentShape.vue"
-    import AvatarOne from "@/components/AvatarOne.vue"
+    import AvatarMain from "@/components/AvatarMain.vue"
     import SideNavigation from "@/components/SideNavigation.vue"
     import CardModuleSelection from "@/components/CardModuleSelection.vue";
     import listeningImage from "@/assets/images/listening-vector.png";
@@ -71,19 +71,24 @@
     export default defineComponent({
         components:{
           SideNavigation, 
-          CommentShape, AvatarOne,
+          CommentShape, AvatarMain,
           CardModuleSelection,
         },
 
         data() {
           return {
             dynamicText: "Select the module you want to learn",
-              // related to card
-              // needs to display images
-              listeningImage: listeningImage,
-              readingImage: readingImage,
-              grammarImage: grammarImage,
-              writingImage: writingImage,
+              
+            // related to card
+            // needs to display images
+            listeningImage: listeningImage,
+            readingImage: readingImage,
+            grammarImage: grammarImage,
+            writingImage: writingImage,
+
+            // related to avatar 
+            avatarImageSource: require("@/assets/images/avatars/avatarOne.png"), // Set the image source dynamically
+
           };
         },
 
