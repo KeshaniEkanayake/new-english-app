@@ -60,16 +60,13 @@
     import CommentShape from "@/components/CommentShape.vue"
     import AvatarOne from "@/components/AvatarOne.vue"
     import SideNavigation from "@/components/SideNavigation.vue"
-
-    import "../assets/css/main.css"
-
-
     import CardModuleSelection from "@/components/CardModuleSelection.vue";
     import listeningImage from "@/assets/images/listening-vector.png";
     import readingImage from "@/assets/images/reading-vector.png";
     import writingImage from "@/assets/images/writing-vector.png";
     import grammarImage from "@/assets/images/grammar-vector.png";
 
+    import "../assets/css/main.css"
 
     export default defineComponent({
         components:{
@@ -113,33 +110,17 @@
 </script>
 
 <style scoped>
-  .container {
-    display: grid;
-    grid-template-rows: auto auto; /* Two rows, the second one may adjust its height based on content */
-    /* Two equal-width columns in the second row */
-    /* grid-template-columns: 1fr 1fr;  */
-    
-  }
-
-  .nested-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-    /* Gap between columns */
-    /* gap: 10px;  */
-    margin-top: 10%; /* Add top margin to move the second row down */
-  }
-
-
+  /* text inside the comment shape */
   /* Use em units for font size to make it relative */
   .text-container {
-      font-size: 1em;
-      /* locate the comment shape 10% away from the left margin */
-      left: 10%;
-    }
+    font-size: 1em;
+    /* locate the comment shape 10% away from the left margin */
+    left: 10%;
+  }
 
-    .card-container{
-      display: flex;
-      margin-left: 10%; /* Add a left margin to move the card-container to the right */
-      gap: 5vh;
-    }
+  .card-container{
+    display: flex;
+    margin-left: 10%; /* Add a left margin to move the card-container to the right */
+    gap: 5vh;
+  }
 </style>
