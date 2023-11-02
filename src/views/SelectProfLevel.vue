@@ -32,13 +32,9 @@
                     </div>
 
                     <AvatarOne/>
+                    
                 </div>
-
-
-            </div>
-
-
-            
+            </div>    
         </div>
             
     </div>
@@ -71,20 +67,7 @@ import "../assets/css/main.css"
     })
 </script>
 
-<style scoped>
-    .container {
-    display: grid;
-    grid-template-rows: auto auto; /* Two rows, the second one may adjust its height based on content */
-    
-    }
-
-    .nested-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-        /* Gap between columns */
-        /* gap: 10px;  */
-        margin-top: 10%; /* Add top margin to move the second row down */
-    }
+<style scoped>   
     .basicProfButton{
         position: absolute; /* Position the image absolutely */
         top: 40%; /* Adjust the top distance as needed */
@@ -106,12 +89,12 @@ import "../assets/css/main.css"
         width: 25%;     
     }
 
+    /* text inside the comment shape */
     /* Use em units for font size to make it relative */
     .text-container{
         font-size: 1em;
         /* locate the comment shape 10% away from the left margin */
         left: 10%;
     }
-
 
 </style>
