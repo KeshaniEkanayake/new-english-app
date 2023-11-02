@@ -33,7 +33,7 @@
 <script>
 import SideNavigation from "@/components/SideNavigation.vue"
 import CommentShape from "@/components/CommentShape.vue"
-import AvatarMain from "../../../components/AvatarMain.vue"
+import AvatarMain from "@/components/AvatarMain.vue"
 
 
 import "../../../assets/css/main.css"
