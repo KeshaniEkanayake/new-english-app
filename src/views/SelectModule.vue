@@ -3,7 +3,7 @@
       <SideNavigation/>
 
       <div class="container">
-        <!-- first row -->
+        <!-- first row (comment shape with text)-->
         <div class="row">
           <CommentShape class="text-container">
             <!-- Add dynamic text content here with a line break -->
@@ -48,11 +48,8 @@
             </div>
             
             <AvatarOne/>
-          </div>
-          
-          
-          
-       </div>
+          </div>  
+        </div>
       </div>
     </div>
 </template>
@@ -78,22 +75,20 @@
         components:{
           SideNavigation, 
           CommentShape, AvatarOne,
-
           CardModuleSelection,
-            },
+        },
 
-            data() {
-              return {
-                dynamicText: "Select the module you want to learn",
-
-                // related to card
-                 // needs to display images
-                listeningImage: listeningImage,
-                readingImage: readingImage,
-                grammarImage: grammarImage,
-                writingImage: writingImage,
-              };
-            },
+        data() {
+          return {
+            dynamicText: "Select the module you want to learn",
+              // related to card
+              // needs to display images
+              listeningImage: listeningImage,
+              readingImage: readingImage,
+              grammarImage: grammarImage,
+              writingImage: writingImage,
+          };
+        },
 
             // ralted to card
             computed: {       
@@ -118,34 +113,33 @@
 </script>
 
 <style scoped>
-
   .container {
-  display: grid;
-  grid-template-rows: auto auto; /* Two rows, the second one may adjust its height based on content */
-  /* Two equal-width columns in the second row */
-  /* grid-template-columns: 1fr 1fr;  */
-  
-}
-
-.nested-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-  /* Gap between columns */
-  /* gap: 10px;  */
-  margin-top: 10%; /* Add top margin to move the second row down */
-}
-
-
-/* Use em units for font size to make it relative */
-.text-container {
-    font-size: 1em;
-    /* locate the comment shape 10% away from the left margin */
-    left: 10%;
+    display: grid;
+    grid-template-rows: auto auto; /* Two rows, the second one may adjust its height based on content */
+    /* Two equal-width columns in the second row */
+    /* grid-template-columns: 1fr 1fr;  */
+    
   }
 
-  .card-container{
-    display: flex;
-    margin-left: 10%; /* Add a left margin to move the card-container to the right */
-    gap: 5vh;
+  .nested-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    /* Gap between columns */
+    /* gap: 10px;  */
+    margin-top: 10%; /* Add top margin to move the second row down */
   }
+
+
+  /* Use em units for font size to make it relative */
+  .text-container {
+      font-size: 1em;
+      /* locate the comment shape 10% away from the left margin */
+      left: 10%;
+    }
+
+    .card-container{
+      display: flex;
+      margin-left: 10%; /* Add a left margin to move the card-container to the right */
+      gap: 5vh;
+    }
 </style>
