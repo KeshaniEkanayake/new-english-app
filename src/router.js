@@ -8,6 +8,7 @@ import About from './views/About.vue';
 import MainPage from './views/MainPage.vue'
 import SelectProfLevel from './views/SelectProfLevel.vue'
 import SelectModule from './views/SelectModule.vue'
+import LeaderBoard from './views/LeaderBoard.vue'
 
 import ReadingMain from './views/basic/reading/ReadingMain.vue'
 
@@ -21,6 +22,7 @@ const routes = [
   { path: '/MainPage', component: MainPage },
   { path: '/SelectProfLevel', component: SelectProfLevel },
   { path: '/SelectModule', component: SelectModule },
+  { path: '/LeaderBoard', component: LeaderBoard },
 
   { path: '/basic/ReadingMain', component: ReadingMain },
 
