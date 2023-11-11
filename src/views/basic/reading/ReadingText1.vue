@@ -2,8 +2,7 @@
 <template>
     <div class="background">
         <SideNavigation/>
-
-        
+       
             <CardReadingText
             :cardTitle="cardTitle"
             :imageSrc="readingTextImage"
