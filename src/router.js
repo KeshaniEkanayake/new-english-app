@@ -14,6 +14,7 @@ import LeaderBoard from './views/LeaderBoard.vue'
 import ReadingMain from './views/basic/reading/ReadingMain.vue'
 import ReadingText1 from '@/views/basic/reading/ReadingText1.vue'
 import ReadingText2 from '@/views/basic/reading/ReadingText2.vue'
+import ReadingText3 from '@/views/basic/reading/ReadingText3.vue'
 
 
 
@@ -32,6 +33,8 @@ const routes = [
   { path: '/basic/ReadingMain', component: ReadingMain },
   { path: '/basic/reading/ReadingText1', component: ReadingText1 },
   { path: '/basic/reading/ReadingText2', component: ReadingText2 },
+  { path: '/basic/reading/ReadingText3', component: ReadingText3 },
+
 
 
   // { path: '/TestView', component: TestView }
