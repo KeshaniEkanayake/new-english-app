@@ -11,7 +11,10 @@ import SelectModule from './views/SelectModule.vue'
 import LeaderBoard from './views/LeaderBoard.vue'
 import SuccessFeedback from './views/SuccessFeedback.vue'
 
+// reading
 import ReadingMain from './views/basic/reading/ReadingMain.vue'
+import ReadingText1 from '@/views/basic/reading/ReadingText1.vue'
+
 
 // import TestView from './views/TestView.vue'
 
@@ -27,6 +30,8 @@ const routes = [
   { path: '/SuccessFeedback', component: SuccessFeedback },
 
   { path: '/basic/ReadingMain', component: ReadingMain },
+  { path: '/basic/reading/ReadingText1', component: ReadingText1 },
+
 
   // { path: '/TestView', component: TestView }
 
