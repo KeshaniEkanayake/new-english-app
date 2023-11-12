@@ -1,4 +1,5 @@
 <template>
+    <router-link :to="link">
     <n-button 
     color="#042C60"
 
@@ -10,6 +11,7 @@
     >
     {{ buttonText }}
     </n-button>
+</router-link>
 </template>
 
 

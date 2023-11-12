@@ -1,4 +1,4 @@
-<!-- this card component contains an image and a a table related to a reading comprehension question  -->
+<!-- this card component contains an image and a a table related to a basic level -> reading comprehension question  -->
 
 <template>
     <n-card>

@@ -1,4 +1,5 @@
 <!-- reading text in basic/reading text 3 -->
+<!-- contains an image with a text -->
 <template>
     <n-card>
         <template #cover>
