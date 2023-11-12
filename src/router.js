@@ -10,6 +10,7 @@ import SelectProfLevel from './views/SelectProfLevel.vue'
 import SelectModule from './views/SelectModule.vue'
 import LeaderBoard from './views/LeaderBoard.vue'
 import SuccessFeedback from './views/SuccessFeedback.vue'
+import DashboardPage from './views/DashboardPage.vue'
 
 // basic level -> reading
 import ReadingMain from './views/basic/reading/ReadingMain.vue'
@@ -31,6 +32,7 @@ const routes = [
   { path: '/SelectModule', component: SelectModule },
   { path: '/LeaderBoard', component: LeaderBoard },
   { path: '/SuccessFeedback', component: SuccessFeedback },
+  { path: '/DashboardPage', component: DashboardPage },
 
   { path: '/basic/ReadingMain', component: ReadingMain },
   { path: '/basic/reading/ReadingText1', component: ReadingText1 },
