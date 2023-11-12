@@ -21,7 +21,7 @@
                        <ButtonSelectReadingTask
                         :round="true"
                         type="info"
-                        link="/your-link-here"
+                        link="/basic/reading/ReadingText1"
                         buttonText="Reading Text 1"
                        >
                         </ButtonSelectReadingTask>
@@ -29,8 +29,16 @@
                         <ButtonSelectReadingTask
                         :round="true"
                         type="info"
-                        link="/your-link-here"
+                        link="/basic/reading/ReadingText2"
                         buttonText="Reading Text 2"
+                       >
+                        </ButtonSelectReadingTask>
+
+                        <ButtonSelectReadingTask
+                        :round="true"
+                        type="info"
+                        link="/basic/reading/ReadingText3"
+                        buttonText="Reading Text 3"
                        >
                         </ButtonSelectReadingTask>
                     </div>

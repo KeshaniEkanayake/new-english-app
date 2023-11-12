@@ -1,4 +1,4 @@
-<!-- this card component contains questions realted to basic level -> reading text 2  -->
+<!-- this card component contains questions realted to basic level -> reading text 3  -->
 
 <template>
     <n-card>
