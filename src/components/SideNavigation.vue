@@ -44,7 +44,7 @@
       {
         label: "Dashboard",
         key: "Dashboard",
-        href: "https://en.wikipedia.org/wiki/Hear_the_Wind_Sing",
+        href: "/DashboardPage",
         icon: GridSharp,
       },
       {

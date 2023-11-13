@@ -1,9 +1,11 @@
 <!-- ProgressBar.vue -->
 <template>
+  <div>
   <p class="progress-label">{{ progress }}% Completed!</p>
   <div class="progress-bar-container">
     <div class="progress-bar" :style="{ width: progress + '%' }"></div>
   </div>
+</div>
 </template>
 
 <script>
@@ -20,9 +22,10 @@ export default {
 <style scoped>
 .progress-bar-container {
   
-  height: 30px;
+  height: 20px;
+  width: 400px;
   background-color: #acacac;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
   display: flex; 
   align-items: center;
