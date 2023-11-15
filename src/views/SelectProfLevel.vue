@@ -18,21 +18,44 @@
                 <div class="nested-grid">
                     <!-- Content for the first column in the second row (prof level buttons) -->
                     <div>
-                        <a href="/basic-prof-url" class="image-link">
-                            <img src="../assets/images/basicProfButton.png" alt="basic prof level button" class="basicProfButton">
-                        </a>
+                        <ButtonSelectProfLevel profLevel="Basic" link="/selectModule">
+                            <template v-slot:icon>
+                                <n-icon color="#FFC700">
+                                <Star/>
+                                </n-icon>
+                            </template>
+                        </ButtonSelectProfLevel>  
+                        
+                        
+                        <ButtonSelectProfLevel profLevel="Intermediate" link="/selectModule">
+                        <template v-slot:icon>
+                            <n-icon color="#FFC700">
+                            <Star/>
+                            </n-icon>
+                            <n-icon color="#FFC700">
+                            <Star />
+                            </n-icon>
+                        </template>
+                        </ButtonSelectProfLevel>
 
-                        <a href="/basic-prof-url" class="image-link">
-                            <img src="../assets/images/intermediateProfButton.png" alt="basic prof level button" class="intermediateProfButton">
-                        </a>
+                        <ButtonSelectProfLevel profLevel="Advanced" link="/selectModule">
+                            <template v-slot:icon>
+                                <n-icon color="#FFC700">
+                                <Star/>
+                                </n-icon>
 
-                        <a href="/basic-prof-url" class="image-link">
-                            <img src="../assets/images/advancedProfButton.png" alt="basic prof level button" class="advancedProfButton">   
-                        </a>
+                                <n-icon color="#FFC700">
+                                <Star />
+                                </n-icon>
+
+                                <n-icon color="#FFC700">
+                                <Star />
+                                </n-icon>
+                            </template>
+                        </ButtonSelectProfLevel>     
                     </div>
 
-                    <AvatarMain :imageSource="avatarImageSource"/>
-                    
+                    <AvatarMain :imageSource="avatarImageSource"/>    
                 </div>
             </div>    
         </div>
@@ -47,6 +70,9 @@ import { defineComponent } from "vue"
 import SideNavigation from "@/components/SideNavigation.vue"
 import CommentShape from "@/components/CommentShape.vue"
 import AvatarMain from "@/components/AvatarMain.vue"
+import ButtonSelectProfLevel from "@/components/ButtonSelectProfLevel.vue"
+
+import { Star } from "@vicons/ionicons5";
 
 
 import "../assets/css/main.css"
@@ -57,6 +83,8 @@ import "../assets/css/main.css"
             SideNavigation,
             CommentShape,
             AvatarMain,
+            ButtonSelectProfLevel,
+            Star,
         },
 
         data() {
