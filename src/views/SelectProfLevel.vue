@@ -18,7 +18,7 @@
                 <div class="nested-grid">
                     <!-- Content for the first column in the second row (prof level buttons) -->
                     <div>
-                        <a href="/basic-prof-url" class="image-link">
+                        <a href="/basic/ReadingMain" class="image-link">
                             <img src="../assets/images/basicProfButton.png" alt="basic prof level button" class="basicProfButton">
                         </a>
 
