@@ -9,7 +9,7 @@
 
     class="button-style"
     >
-    {{ buttonText }}
+    <span class="button-content"> {{ buttonText }} </span>
     </n-button>
 </router-link>
 </template>
@@ -30,7 +30,12 @@
 
 <style scoped>
     .button-style{
-        width: 500px;
+        width: 100%;
         margin-top: 5%;
+        margin-left: 15%;
     }
+
+    .button-content {
+    font-size: 1.2vw; /*vw-viewport width */
+}
 </style>
