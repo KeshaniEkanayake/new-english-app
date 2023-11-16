@@ -95,7 +95,7 @@
             // ralted to card
             computed: {       
               ReadingContentPath() {
-              return '/Basic/Listining/lesson1'; // Modify with your path that you given in the route.vue file under "path:" variable
+              return '/basic/ReadingMain'; // Modify with your path that you given in the route.vue file under "path:" variable
               },
 
               ListningContentPath() {
