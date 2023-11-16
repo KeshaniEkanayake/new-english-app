@@ -46,4 +46,15 @@ export default {
   padding: 1em;
 }
 
+
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .text-container {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+  }
+}
+
+
 </style>
