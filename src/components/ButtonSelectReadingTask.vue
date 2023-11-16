@@ -30,7 +30,8 @@
 
 <style scoped>
     .button-style{
-        width: 500px;
+        width: 100%;
         margin-top: 5%;
+        margin-left: 15%;
     }
 </style>
