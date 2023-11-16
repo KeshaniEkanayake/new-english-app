@@ -50,27 +50,25 @@
       {
         label: "Lessons",
         key: "Lessons",
-        href:"/SelectModule",
         icon: DesktopOutline
       },
       {
         label: "Leaderboard",
         key: "Leaderboard",
-        href:"/LeaderBoard",
         icon: PodiumSharp
       },
       {
         label: "Settings",
         key: "Settings",
         icon: SettingsSharp,
-        
+        href: "/DashboardPage",
       },
       {
         label: "Log out",
         key: "Log out",
         href:"/logout",
         icon: LogOut,
-        
+        href: "/MainPage",
       }
     ];
     
@@ -81,7 +79,7 @@
           collapsed: ref(true),
           renderMenuLabel(option) {
             if ("href" in option) {
-              return h("a", { href: option.href, target: "_self" }, [
+              return h("a", { href: option.href, target: "_blank" }, [
                 option.label
               ]);
             }
