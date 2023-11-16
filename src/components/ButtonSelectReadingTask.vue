@@ -30,12 +30,14 @@
 
 <style scoped>
     .button-style{
-        width: 100%;
-        margin-top: 5%;
-        margin-left: 15%;
+        width: 150%;
+        height: 50%;
+        margin-bottom: 5%;
+        margin-left: 10%;
     }
 
     .button-content {
-    font-size: 1.2vw; /*vw-viewport width */
+    font-size: 1.5vw; /*vw-viewport width */
 }
+
 </style>
