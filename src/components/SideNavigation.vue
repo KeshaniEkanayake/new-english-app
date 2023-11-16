@@ -50,14 +50,14 @@
       {
         label: "Lessons",
         key: "Lessons",
-        icon: DesktopOutline,
-        href: "/SelectProfLevel",
+        href: "/selectmodule",
+        icon: DesktopOutline
       },
       {
         label: "Leaderboard",
         key: "Leaderboard",
-        icon: PodiumSharp,
-        href: "/LeaderBoard",
+        href: "/leaderBoard",
+        icon: PodiumSharp
       },
       {
         label: "Settings",
@@ -68,8 +68,9 @@
       {
         label: "Log out",
         key: "Log out",
+        href:"/logout",
         icon: LogOut,
-        href: "/MainPage",
+        
       }
     ];
     
