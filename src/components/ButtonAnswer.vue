@@ -3,7 +3,7 @@
 <template>
     <n-space>
       <n-button strong secondary type="info" class="button-style">
-        {{answer}}
+        <span class="button-content">{{answer}}</span>
       </n-button>
     </n-space>
   </template>
@@ -23,6 +23,10 @@
   
   <style scoped>
    .button-style{
-      width: 200px;
+      width: 14vw;/*vw-viewport width */
    }
+
+   .button-content {
+    font-size: 1.2vw; /*vw-viewport width */
+}
   </style>
