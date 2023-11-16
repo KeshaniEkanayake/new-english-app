@@ -55,8 +55,8 @@
     .card-style{
           border-radius: 1.25rem;
           background-color: #0C4F80;
-          width: 25vh;
-          height: 40vh;
+          width: 10vw; /*vw-viewport width*/
+          height: 40vh; /*vh - viewport hwight */
 
           margin: 0 auto; /* Center the card horizontally */
           box-sizing: border-box; /* Include padding in the total width/height */

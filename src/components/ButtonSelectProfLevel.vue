@@ -42,16 +42,16 @@ export default defineComponent({
 <style scoped>
 
  .n-button-style {
-    border-radius: 50px; /* Adjust the value to control the curve amount */
+    border-radius: 20px; /* Adjust the value to control the curve amount */
     width: 60%;
     height: 50%;
     margin-bottom: 4%;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 5vw; /*left and right padding will be 5% of the viewport width*/
   }
 
   .n-button-content {
-    font-size: 25px; /* Adjust the font size as needed */
+    font-size: 2vw; 
 }
 
 </style>

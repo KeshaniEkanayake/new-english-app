@@ -118,7 +118,7 @@
   /* text inside the comment shape */
   /* Use em units for font size to make it relative */
   .text-container {
-    font-size: 1em;
+    font-size: 1vw;
     /* locate the comment shape 10% away from the left margin */
     left: 10%;
   }
@@ -126,6 +126,6 @@
   .card-container{
     display: flex;
     margin-left: 10%; /* Add a left margin to move the card-container to the right */
-    gap: 5vh;
+    gap: 4vw;
   }
 </style>
