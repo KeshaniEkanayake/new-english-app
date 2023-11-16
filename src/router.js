@@ -4,6 +4,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from './views/Home.vue';
 import About from './views/About.vue';
+import TestView from './views/TestView.vue';
+
 
 import MainPage from './views/MainPage.vue'
 import SelectProfLevel from './views/SelectProfLevel.vue'
@@ -43,7 +45,7 @@ const routes = [
 
 
 
-  // { path: '/TestView', component: TestView }
+  { path: '/TestView', component: TestView }
 
 
 ];
