@@ -96,4 +96,15 @@ export default {
     .button-container{
         margin-left: 20%;
     }
+
+
+
+
+
+    /* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .text-container {
+    font-size: 0.8em; /* Adjust font size for smaller screens */
+  }
+}
 </style>

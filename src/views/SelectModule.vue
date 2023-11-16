@@ -95,19 +95,19 @@
             // ralted to card
             computed: {       
               ReadingContentPath() {
-              return '/basic/ReadingMain'; // Modify with your path that you given in the route.vue file under "path:" variable
+              return '/Basic/reading/ReadingMain'; // Modify with your path that you given in the route.vue file under "path:" variable
               },
 
               ListningContentPath() {
-              return '/Basic/Listining/lesson1'; // Modify with your path that you given in the route.vue file under "path:" variable
+              return '/Basic/listining/lesson1'; // Modify with your path that you given in the route.vue file under "path:" variable
               },
 
               WritingContentPath() {
-              return '/Basic/Listining/lesson1'; // Modify with your path that you given in the route.vue file under "path:" variable
+              return '/Basic/writing/lesson1'; // Modify with your path that you given in the route.vue file under "path:" variable
               },
 
               GrammarContentPath() {
-              return '/Basic/Listining/lesson1'; // Modify with your path that you given in the route.vue file under "path:" variable
+              return '/Basic/grammar/lesson1'; // Modify with your path that you given in the route.vue file under "path:" variable
               },
             },
         })

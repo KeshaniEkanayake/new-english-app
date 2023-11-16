@@ -36,7 +36,7 @@ const routes = [
   { path: '/DashboardPage', component: DashboardPage },
   { path: '/GrammarPage', component: GrammarPage },
 
-  { path: '/basic/ReadingMain', component: ReadingMain },
+  { path: '/basic/reading/ReadingMain', component: ReadingMain },
   { path: '/basic/reading/ReadingText1', component: ReadingText1 },
   { path: '/basic/reading/ReadingText2', component: ReadingText2 },
   { path: '/basic/reading/ReadingText3', component: ReadingText3 },

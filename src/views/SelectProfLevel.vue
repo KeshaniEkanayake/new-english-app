@@ -129,4 +129,10 @@ import "../assets/css/main.css"
         left: 10%;
     }
 
+    /* Media query for smaller screens */
+    @media screen and (max-width: 768px) {
+  .text-container {
+    font-size: 0.8em; /* Adjust font size for smaller screens */
+  }
+}
 </style>
