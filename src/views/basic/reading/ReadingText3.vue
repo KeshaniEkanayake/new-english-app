@@ -2,19 +2,18 @@
     <div class="background">
         <SideNavigation/>
 
-        <CardReading3
-            :cardTitle="cardTitle"
-            :subTopic1="subTopic1"
-            :readingText1="readingText1"
-            :subTopic2="subTopic2"
-            :readingText2="readingText2"
-            :imageSrc="TextImage"
-           
-        />
+        <div class="readingtext-container-style">
+            <CardReading3
+                :cardTitle="cardTitle"
+                :subTopic1="subTopic1"
+                :readingText1="readingText1"
+                :subTopic2="subTopic2"
+                :readingText2="readingText2"
+                :imageSrc="TextImage"
+            />
 
-
-        <CardReading3_questions></CardReading3_questions>
-
+            <CardReading3_questions></CardReading3_questions>
+        </div>
     </div>
 </template>
 
@@ -32,7 +31,7 @@ export default {
 
     data() {
     return {
-            cardTitle: "Holiday home adverts", 
+            cardTitle: "Holiday Home Adverts", 
 
             subTopic1:"City Flat",
 
@@ -66,5 +65,9 @@ export default {
 </script>
 
 <style scoped>
-
+    .readingtext-container-style{
+        display: flex;
+        justify-content: center;
+        gap: 3%;
+   } 
 </style>
