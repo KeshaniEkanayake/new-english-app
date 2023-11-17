@@ -2,17 +2,15 @@
 <template>
     <div class="background">
         <SideNavigation/>
-       
-            <CardReadingText
-            :cardTitle="cardTitle"
-            :imageSrc="readingTextImage"
-            :readingText="readingText"
-            />
+            <div class="readingtext-container-style">
+                <CardReadingText
+                :cardTitle="cardTitle"
+                :imageSrc="readingTextImage"
+                :readingText="readingText"
+                />
 
-            <TabsReading/>
-       
-        
-
+                <TabsReading/>
+            </div>           
     </div>
     
     
@@ -55,5 +53,9 @@ export default {
 </script>
 
 <style scoped>
-    
+   .readingtext-container-style{
+        display: flex;
+        justify-content: center;
+        gap: 3%;
+   } 
 </style>

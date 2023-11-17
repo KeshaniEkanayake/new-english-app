@@ -70,7 +70,7 @@
     border-radius: 1.25rem;
     display: block; /* Ensures the image is centered horizontally */
     margin: 0 auto; /* Centers the image horizontally */
-    max-width: 60%; /* Adjust the image size as needed */
+    max-width: 70%; /* Adjust the image size as needed */
     
   }
 

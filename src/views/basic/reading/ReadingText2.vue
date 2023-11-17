@@ -3,14 +3,11 @@
     <div class="background">
         <SideNavigation/>
 
-        <!-- left box-consists of reading text -->
-        <CardReading2/>
-
-        <!--right box- consists of questions -->
-        <CardReading2_questions/>
-       
+        <div class="readingtext-container-style">
+            <CardReading2/>
+            <CardReading2_questions/>
+        </div>
         
-
     </div>
     
     
@@ -39,5 +36,10 @@ export default {
 </script>
 
 <style scoped>
-    
+    .readingtext-container-style{
+        display: flex;
+        justify-content: center;
+        gap: 3%;
+
+   } 
 </style>

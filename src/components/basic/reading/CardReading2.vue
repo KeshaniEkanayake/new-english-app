@@ -5,7 +5,7 @@
       <template #cover>
         <img src="@/assets/images/images-in-questions/readingText2-departure.jpg" class="image-style">
         </template>
-          <h2>An airport departures board</h2>
+          <h2>An Airport Departures Board</h2>
             <table>
               <tr>
                 <th>Time</th>
@@ -120,7 +120,7 @@
     border-radius: 1.25rem;
     display: block; /* Ensures the image is centered horizontally */
     margin: 0 auto; /* Centers the image horizontally */
-    max-width: 60%; /* Adjust the image size as needed */
+    max-width: 70%; /* Adjust the image size as needed */
     
   }
 
