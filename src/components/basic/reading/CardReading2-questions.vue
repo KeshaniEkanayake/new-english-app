@@ -65,12 +65,12 @@ export default {
     ]);
 
     const questions = ref([
-      { id: 1, text: "The plane isn't here now." },
-      { id: 2, text: "The plane is late." },
-      { id: 3, text: "The plane is not going to leave." },
-      { id: 4, text: "You can get on the plane now." },
-      { id: 5, text: "The plane is leaving very soon." },
-      { id: 6, text: "You need to go to a different place to get on the plane." },
+      { id: 1, text: "1. The plane isn't here now." },
+      { id: 2, text: "2. The plane is late." },
+      { id: 3, text: "3. The plane is not going to leave." },
+      { id: 4, text: "4. You can get on the plane now." },
+      { id: 5, text: "5. The plane is leaving very soon." },
+      { id: 6, text: "6. You need to go to a different place to get on the plane." },
     ]);
 
     const selectedAnswers = ref({});
@@ -115,6 +115,12 @@ export default {
 </script>
 
 <style scoped>
+.n-card {
+    max-width: 50%;
+    border-radius: 1.25rem;
+    box-shadow: 0px 4px 4px 5px rgba(0, 0, 0, 0.25);
+  }
+  
 .draggable {
   cursor: move;
   display: inline-block;

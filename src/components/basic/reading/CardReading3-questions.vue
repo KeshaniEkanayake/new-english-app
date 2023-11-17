@@ -7,6 +7,7 @@
         
       <div class="container-style">
         <!-- questions -->
+        
         <p>1. What is the main feature of the city flat's balcony?</p>
         <RadioAnswers
             :answer1Text="dynamicText1.answer1"
