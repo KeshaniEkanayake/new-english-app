@@ -21,7 +21,7 @@
 import "@/assets/css/main.css"
 import SideNavigation from "@/components/SideNavigation.vue"
 import CardReading3 from "@/components/basic/reading/CardReading3.vue"
-import readingTextImage from "@/assets/images/images-in-questions/reading3.jpg";
+import readingTextImage from "@/assets/images/images-in-questions/flat-farmhouse.jpg";
 import CardReading3_questions from "@/components/basic/reading/CardReading3-questions.vue"
 
 export default {
