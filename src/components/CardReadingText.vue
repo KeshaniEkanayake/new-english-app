@@ -7,6 +7,8 @@
         </template>
           <h2>{{cardTitle}}</h2>
             <p class="para-style"> {{ readingText }}</p>
+
+            
     </n-card>
   </template>
   

@@ -96,6 +96,15 @@
               </tr>
 
             </table>
+            <br>
+
+            <!-- background sound -->
+            <!-- <audio controls autoplay loop>   when we put the attribute 'contols' ->it shows a button to stop the sound--> 
+              <!-- when 'controls' attribute is removed, user will continuously listen the sound. they cannot stop it  -->
+            <audio autoplay loop>
+                <source src="@/assets/audio/airplane-landing.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
     </n-card>
   </template>
   

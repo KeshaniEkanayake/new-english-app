@@ -7,11 +7,11 @@
         </template>
         <h2>{{cardTitle}}</h2>
         
-        <h4>{{subTopic1}}</h4>
+        <h3>{{subTopic1}}</h3>
             <p class="para-style"> {{ readingText1 }}</p>
         
             
-         <h4>{{subTopic2}}</h4>
+         <h3>{{subTopic2}}</h3>
             <p class="para-style"> {{ readingText2 }}</p>
 
     </n-card>
