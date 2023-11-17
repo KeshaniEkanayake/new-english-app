@@ -5,7 +5,7 @@
       <template #cover>
         <img src="@/assets/images/images-in-questions/readingText2-departure.jpg" class="image-style">
         </template>
-          <h2>An airport departures board</h2>
+          <h2>An Airport Departures Board</h2>
             <table>
               <tr>
                 <th>Time</th>
