@@ -23,7 +23,8 @@ export default {
 .progress-bar-container {
   
   height: 20px;
-  width: 400px;
+  width: 30vw;
+  /* width: 400px; */
   background-color: #acacac;
   border-radius: 10px;
   overflow: hidden;
