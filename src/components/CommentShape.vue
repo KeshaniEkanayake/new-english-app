@@ -16,8 +16,9 @@ export default {
 
 <style scoped>
 .comment-shape-container {
-  position: relative;
-  
+  position: relative; 
+  align-items: center;
+  text-align: center;
 }
 .comment-shape {
   /* Make the image responsive to its container */
@@ -44,6 +45,10 @@ export default {
   color: #fff; /* Set the text color */
 
   padding: 1em;
+
+  align-items: center;
+  justify-content: center;
+
 }
 
 

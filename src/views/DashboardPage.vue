@@ -122,7 +122,7 @@ import ImageRow from "@/components/ImageRow.vue"
         /* margin-left: 30%; */
         padding: 5%;
         position: relative;
-        width: 535px;
+        width: 50vw;/*vw-viewport width */
     }
   .progress-container{
     display: flex;
