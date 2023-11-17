@@ -135,8 +135,24 @@ import ImageRow from "@/components/ImageRow.vue"
         text-align: left;
         /* margin-left: 30%; */
         padding: 5%;
+<<<<<<< HEAD
+        position: relative;
+        width: 50vw;/*vw-viewport width */
+    }
+  .progress-container{
+    display: flex;
+  }
+  .image-style{
+    width: 8%;
+    margin-left: 5%;
+    margin-bottom: 3%;
+  }
+  .button-style{
+        width: 50%;
+=======
         /* position: relative; */
         /* width: 535px; */
+>>>>>>> 0b84403b34a5a94c83bb74090fabb00ecc9129c5
     }
     .card-container {
   display: flex;
