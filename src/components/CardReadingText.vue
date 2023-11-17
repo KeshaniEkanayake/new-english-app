@@ -8,7 +8,11 @@
           <h2>{{cardTitle}}</h2>
             <p class="para-style"> {{ readingText }}</p>
 
-            
+            <!-- background sound -->
+            <!-- <audio controls autoplay loop :src="audioSrc"> 'controls attribute will put a button to stop the sound'-->
+             <audio autoplay loop :src="audioSrc">
+                Your browser does not support the audio element.
+            </audio>
     </n-card>
   </template>
   
@@ -32,6 +36,12 @@
       imageSrc: {
               type: String,
               required: true, // Make the prop required
+      },
+
+      // add a background sound track
+      audioSrc: {
+        type: String,
+        required: true, // Make the prop required
       },
     }
   })

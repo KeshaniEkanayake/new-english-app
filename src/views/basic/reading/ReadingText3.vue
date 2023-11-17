@@ -10,6 +10,7 @@
                 :subTopic2="subTopic2"
                 :readingText2="readingText2"
                 :imageSrc="TextImage"
+                :audioSrc="audioSource"
             />
 
             <CardReading3_questions></CardReading3_questions>
@@ -23,6 +24,7 @@ import SideNavigation from "@/components/SideNavigation.vue"
 import CardReading3 from "@/components/basic/reading/CardReading3.vue"
 import readingTextImage from "@/assets/images/images-in-questions/flat-farmhouse.jpg";
 import CardReading3_questions from "@/components/basic/reading/CardReading3-questions.vue"
+import audioFile from "@/assets/audio/holidays.mp3"
 
 export default {
     components:{
@@ -57,7 +59,7 @@ export default {
                         Escape from normal life for a few days as we have … NO INTERNET and you can only use 
                         mobile phones at the bottom of the garden!`,            
 
-
+           audioSource: audioFile, 
        
     };
   },
