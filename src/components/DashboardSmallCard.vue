@@ -2,8 +2,13 @@
 <template>
   <div class="card-style">
     <div class="card-content">
-      <h2 class="card-heading">{{ cardHeading }}</h2>
-      <p class="card-subheading">{{ cardSubheading }}</p>
+      <div class="image-container">
+        <img :src="imageSrc" alt="Card Image" class="card-image" />
+      </div>
+      <div class="text-content">
+        <h2 class="card-heading">{{ cardHeading }}</h2>
+        <p class="card-subheading">{{ cardSubheading }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -13,6 +18,7 @@ export default {
   props: {
     cardHeading: String,
     cardSubheading: String,
+    imageSrc: String,
   },
 };
 </script>
@@ -27,19 +33,44 @@ export default {
   transition: all 0.3s;
   overflow: hidden;
   color: #0C4F80;
+  border: solid 3px #0C4F80;
 }
 
 .card-content {
-  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  /* padding: 10px; */
+}
+
+.text-content {
+  flex-grow: 1;
 }
 
 .card-heading {
   font-size: 1.2rem;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
 }
 
 .card-subheading {
   font-size: 1rem;
-  margin-bottom: 16px;
+  font-size: medium;
+  font-weight: 1000;
+  /* margin-bottom: 10px; */
+}
+
+.image-container {
+  /* flex-shrink: 0; */
+ width: 50%;
+ /* padding: 5px; */
+ padding-top: 5px;
+ display: flex;
+ justify-content: center;
+ background-color: #0C4F80;
+}
+
+.card-image {
+  width: 80%;
+  height: 80%;
+  margin-top: 6%;
 }
 </style>

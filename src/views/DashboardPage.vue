@@ -18,22 +18,28 @@
                 <div class="nested-grid">
                     <!-- Content for the first column in the second row (prof level buttons) -->
                     <div class="dashboard">
-                        <div class="dashboard-top">
-                            <h2>In progress...</h2>
-                            <h2 style="color: #0C4F80; font-weight: 1000;">Writing Exercise - Beginner Level</h2>
-                        
-                            <div class="progress-container">
-                                <ProgressBar :progress="activityProgress"/>
-                                <img class="image-style" src="@/assets/images/success-cup.png" alt="img">
-                            </div>
-                            <ButtonGetstarted class="button-style"/>  
-                        </div>
 
                     <div class="card-container">
-                        <DashboardSmallCard :cardHeading="cardHeading1" :cardSubheading="cardSubheading1"/>
-                        <DashboardSmallCard :cardHeading="cardHeading2" :cardSubheading="cardSubheading2"/>
-                        <DashboardSmallCard :cardHeading="cardHeading3" :cardSubheading="cardSubheading3"/>
+                        <DashboardSmallCard :cardHeading="cardHeading1" :cardSubheading="cardSubheading1" :imageSrc="cardImage1"/>
+                        <DashboardSmallCard :cardHeading="cardHeading2" :cardSubheading="cardSubheading2" :imageSrc="cardImage2"/>
+                        <DashboardSmallCard :cardHeading="cardHeading3" :cardSubheading="cardSubheading3" :imageSrc="cardImage3"/>
                     </div>
+
+                        <div class="dashboard-top">
+                            <div class="card-left">
+                                <h2>In progress...</h2>
+                                <h2 style="color: #0C4F80; font-weight: 1000;">Writing Exercise - Beginner Level</h2>
+                            
+                                <div class="progress-container">
+                                    <ProgressBar :progress="activityProgress"/>
+                                </div>
+                                <ButtonGetstarted class="button-style"/>  
+                            </div>
+
+                            <div class="card-right">
+                                <img class="image-style" src="@/assets/images/success-cup.png" alt="img">
+                            </div>
+                        </div>
 
                     <div class="dashboard-bottom">
                         <h2 style="color: #0C4F80; font-weight: 1000;">Badges Earned</h2>
@@ -81,10 +87,13 @@ import ImageRow from "@/components/ImageRow.vue"
 
             cardHeading1: "Level",
             cardSubheading1: "Beginner",
+            cardImage1: require("@/assets/images/icons/next-level.png"),
             cardHeading2: "Rank",
             cardSubheading2: "1234",
+            cardImage2: require("@/assets/images/icons/top.png"),
             cardHeading3: "Target",
             cardSubheading3: "500 Points",
+            cardImage3: require("@/assets/images/icons/reward.png"),
 
             imageSources: [
             require("@/assets/images/Badge.png"),
@@ -111,16 +120,22 @@ import ImageRow from "@/components/ImageRow.vue"
     }
     .nested-grid{
         margin-top: 15%;
+        margin-left: 6%;
+       
     }
     .dashboard{
-        margin-left: 15%; 
+        /* margin-left: 15%;  */
+        width: 50vw;
     }
     .dashboard-top{
+        display: flex;
+        flex-direction: row;
         background-color: rgb(215, 236, 255);
         border-radius: 1.25rem;
         text-align: left;
         /* margin-left: 30%; */
         padding: 5%;
+<<<<<<< HEAD
         position: relative;
         width: 50vw;/*vw-viewport width */
     }
@@ -134,11 +149,16 @@ import ImageRow from "@/components/ImageRow.vue"
   }
   .button-style{
         width: 50%;
+=======
+        /* position: relative; */
+        /* width: 535px; */
+>>>>>>> 0b84403b34a5a94c83bb74090fabb00ecc9129c5
     }
     .card-container {
   display: flex;
-  margin-top: 5%;
-  width: 600px;
+  margin-bottom: 5%;
+  /* margin-top: 5%; */
+  /* width: 600px; */
 }
 .dashboard-bottom{
     background-color: rgb(215, 236, 255);
@@ -146,10 +166,33 @@ import ImageRow from "@/components/ImageRow.vue"
         text-align: left;
         padding: 5%;
         position: relative;
-        width: 535px;
+        /* width: 535px; */
     margin-top: 5%;
     margin-bottom: 5%;
 }
+  .progress-container{
+    display: flex;
+    margin-bottom: 5%;
+  }
+  .image-style{
+    width: 50%;
+    height: 90%;
+    /* margin-left: 5%;
+    margin-bottom: 3%; */
+  }
+  .card-left{
+    width: 70%;
+  }
+  .card-right{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5%;
+  }
+  .button-style{
+        width: 50%;
+    }
 .image-row {
     display: flex;
     justify-content: space-between;

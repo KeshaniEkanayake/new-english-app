@@ -56,7 +56,7 @@
       {
         label: "Leaderboard",
         key: "Leaderboard",
-        href: "/leaderBoard",
+        href: "/LeaderBoard",
         icon: PodiumSharp
       },
       {
