@@ -7,12 +7,7 @@
             <CardReading2/>
             <CardReading2_questions/>
         </div>
-            
         
-        
-       
-        
-
     </div>
     
     
