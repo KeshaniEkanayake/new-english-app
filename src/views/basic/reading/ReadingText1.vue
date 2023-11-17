@@ -7,6 +7,7 @@
                 :cardTitle="cardTitle"
                 :imageSrc="readingTextImage"
                 :readingText="readingText"
+                :audioSrc="audioSource"
                 />
 
                 <TabsReading/>
@@ -24,6 +25,7 @@ import CardReadingText from "@/components/CardReadingText.vue"
 
 import readingTextImage from "@/assets/images/images-in-questions/reading1.jpg";
 
+import audioFile from "@/assets/audio/yoga-wind-chimes.mp3"
 
 import "../../../assets/css/main.css"
 
@@ -46,7 +48,9 @@ export default {
             How much? £10 for four 30-minute classes.
             What to bring? Comfortable clothes. Divya will provide the yoga mats.
             How to join? Write to Sam at Sam.Holden@example.com
-            We can only take a maximum of 20 in the room, so book now!`,            
+            We can only take a maximum of 20 in the room, so book now!`, 
+            
+            audioSource: audioFile, 
         };
     },
 }
