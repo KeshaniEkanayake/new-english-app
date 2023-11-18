@@ -83,7 +83,7 @@ import ImageRow from "@/components/ImageRow.vue"
         data() {
           return {
             dynamicText: "Hey there! Welcome back!",
-            activityProgress: 50,
+            activityProgress: 80,
 
             cardHeading1: "Level",
             cardSubheading1: "Beginner",
