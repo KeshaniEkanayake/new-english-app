@@ -108,13 +108,13 @@ import InputAnswer from "@/components/InputAnswer.vue"
 import ButtonCheck from "@/components/ButtonCheck.vue"
 import RadioTrueFalse from "@/components/RadioTrueFalse.vue"
 
-
-
 export default{
   components:{
     ButtonAnswer, InputAnswer, ButtonCheck, RadioTrueFalse,
   }
 }
+
+
 
 </script>
 
