@@ -99,7 +99,7 @@
               },
 
               ListningContentPath() {
-              return '/Basic/listining/lesson1'; // Modify with your path that you given in the route.vue file under "path:" variable
+              return '/Basic/listening/ListeningMain'; // Modify with your path that you given in the route.vue file under "path:" variable
               },
 
               WritingContentPath() {

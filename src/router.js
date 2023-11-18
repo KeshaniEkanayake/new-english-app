@@ -21,10 +21,12 @@ import ReadingText1 from '@/views/basic/reading/ReadingText1.vue'
 import ReadingText2 from '@/views/basic/reading/ReadingText2.vue'
 import ReadingText3 from '@/views/basic/reading/ReadingText3.vue'
 
-
+// basic level -> listening
+import ListeningMain from './views/basic/listening/ListeningMain.vue'
+import ListeningActivity1 from '@/views/basic/listening/ListeningActivity1.vue' 
+import VideoView from '@/views/basic/listening/VideoView.vue'
 
 // import TestView from './views/TestView.vue'
-
 
 const routes = [
   { path: '/Home', component: Home },
@@ -43,7 +45,9 @@ const routes = [
   { path: '/basic/reading/ReadingText2', component: ReadingText2 },
   { path: '/basic/reading/ReadingText3', component: ReadingText3 },
 
-
+  { path: '/basic/listening/ListeningMain', component: ListeningMain },
+  { path: '/basic/listening/ListeningActivity1', component: ListeningActivity1 },
+  { path: '/basic/listening/VideoView', component: VideoView },
 
   { path: '/TestView', component: TestView }
 
