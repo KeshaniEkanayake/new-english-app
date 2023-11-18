@@ -7,12 +7,18 @@
         </template>
         <h2>{{cardTitle}}</h2>
         
-        <h4>{{subTopic1}}</h4>
+        <h3>{{subTopic1}}</h3>
             <p class="para-style"> {{ readingText1 }}</p>
         
             
-         <h4>{{subTopic2}}</h4>
+         <h3>{{subTopic2}}</h3>
             <p class="para-style"> {{ readingText2 }}</p>
+
+        <!-- background sound -->
+        <!-- <audio controls autoplay :src="audioSrc"> 'controls attribute will put a button to stop the sound'-->
+        <audio autoplay loop :src="audioSrc">
+           Your browser does not support the audio element.
+        </audio>
 
     </n-card>
   </template>
@@ -53,6 +59,12 @@
               type: String,
               required: true, // Make the prop required
       },
+
+      // add a background sound track
+      audioSrc: {
+        type: String,
+        required: true, // Make the prop required
+      },
     }
   })
 </script>
@@ -70,7 +82,7 @@
     border-radius: 1.25rem;
     display: block; /* Ensures the image is centered horizontally */
     margin: 0 auto; /* Centers the image horizontally */
-    max-width: 60%; /* Adjust the image size as needed */
+    max-width: 70%; /* Adjust the image size as needed */
     
   }
 

@@ -5,7 +5,7 @@
       <template #cover>
         <img src="@/assets/images/images-in-questions/readingText2-departure.jpg" class="image-style">
         </template>
-          <h2>An airport departures board</h2>
+          <h2>An Airport Departures Board</h2>
             <table>
               <tr>
                 <th>Time</th>
@@ -96,6 +96,15 @@
               </tr>
 
             </table>
+            <br>
+
+            <!-- background sound -->
+            <!-- <audio controls autoplay loop>   when we put the attribute 'contols' ->it shows a button to stop the sound--> 
+              <!-- when 'controls' attribute is removed, user will continuously listen the sound. they cannot stop it  -->
+            <audio autoplay loop>
+                <source src="@/assets/audio/airplane-landing.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
     </n-card>
   </template>
   
@@ -120,7 +129,7 @@
     border-radius: 1.25rem;
     display: block; /* Ensures the image is centered horizontally */
     margin: 0 auto; /* Centers the image horizontally */
-    max-width: 60%; /* Adjust the image size as needed */
+    max-width: 70%; /* Adjust the image size as needed */
     
   }
 

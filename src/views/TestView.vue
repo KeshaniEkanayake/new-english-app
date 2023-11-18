@@ -1,55 +1,96 @@
+<!-- this is a test page used to test some codes -->
+
 <template>
-  <div>
-    <!-- Circle shape with dynamic text -->
-    <div :style="circleStyle">
-      {{ dynamicText }}
+  <n-card>
+    <h3>Match the phrases with the sentences. Drag the correct answer and drop it near the question.</h3>
+
+    <!-- Answers -->
+    <div v-for="answer in answers" :key="answer.id" class="draggable" @dragstart="dragStart(answer.id)">
+      <ButtonAnswer :answer="answer.text" />
     </div>
 
-    <!-- Comment shape with dynamic comment text -->
-    <div :style="commentStyle">
-      {{ dynamicComment }}
+    <br><br>
+
+    <!-- Questions -->
+    <div v-for="question in questions" :key="question.id" class="droppable" @dragover.prevent="dragOver" @drop="drop(question.id)">
+      <p>{{ question.text }}</p>
+      <InputAnswer :value="selectedAnswers[question.id]" />
     </div>
 
-    <!-- Inputs for updating dynamic text and comment -->
-    <div>
-      <input v-model="dynamicText" placeholder="Enter text" />
-      <input v-model="dynamicComment" placeholder="Enter comment" />
+    <br>
+
+    <div class="center-item">
+      <ButtonCheck @click="checkAnswers" />
     </div>
-  </div>
+  </n-card>
 </template>
 
 <script>
+import ButtonAnswer from "@/components/ButtonAnswer.vue";
+import InputAnswer from "@/components/InputAnswer.vue";
+import ButtonCheck from "@/components/ButtonCheck.vue";
+
 export default {
+  components: {
+    ButtonAnswer,
+    InputAnswer,
+    ButtonCheck,
+  },
   data() {
     return {
-      dynamicText: "Hello, Vue!",
-      dynamicComment: "A comment!",
+      answers: [
+        { id: 1, text: "Final call" },
+        { id: 2, text: "Cancelled" },
+        { id: 3, text: "Boarding" },
+        { id: 4, text: "Departed" },
+        { id: 5, text: "Gate change" },
+        { id: 6, text: "Delayed" },
+      ],
+      questions: [
+        { id: 1, text: "The plane isn't here now." },
+        { id: 2, text: "The plane is late." },
+        { id: 3, text: "The plane is not going to leave." },
+        { id: 4, text: "You can get on the plane now." },
+        { id: 5, text: "The plane is leaving very soon." },
+        { id: 6, text: "You need to go to a different place to get on the plane." },
+      ],
+      selectedAnswers: {},
     };
   },
-  computed: {
-    circleStyle() {
-      return {
-        width: '100px',
-        height: '100px',
-        borderRadius: '50%',
-        background: 'blue',
-        color: 'white',
-        textAlign: 'center',
-        lineHeight: '100px',
-        margin: '10px',
-      };
+  methods: {
+    dragStart(answerId) {
+      event.dataTransfer.setData("text/plain", answerId);
     },
-    commentStyle() {
-      return {
-        width: '150px',
-        height: '50px',
-        background: 'green',
-        color: 'white',
-        textAlign: 'center',
-        lineHeight: '50px',
-        margin: '10px',
-      };
+    dragOver(event) {
+      event.preventDefault();
+    },
+    drop(questionId) {
+      const answerId = event.dataTransfer.getData("text/plain");
+      this.$set(this.selectedAnswers, questionId, answerId);
+    },
+    checkAnswers() {
+      // Implement your logic to check the correctness of answers
+      console.log(this.selectedAnswers);
     },
   },
 };
 </script>
+
+<style scoped>
+.draggable {
+  cursor: move;
+  display: inline-block;
+  margin: 5px;
+}
+
+.droppable {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.center-item {
+  text-align: center;
+}
+</style>
