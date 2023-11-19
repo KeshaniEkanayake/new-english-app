@@ -4,9 +4,9 @@
         <SideNavigation/>
             <div class="readingtext-container-style">
                 <CardReadingText
-                :cardTitle="cardTitle"
+                :cardTitle="textContent.challengeTitle"
                 :imageSrc="readingTextImage"
-                :readingText="readingText"
+                :readingText="textContent.challengeDescription"
                 :audioSrc="audioSource"
                 />
 
@@ -29,6 +29,8 @@ import audioFile from "@/assets/audio/yoga-wind-chimes.mp3"
 
 import "../../../assets/css/main.css"
 
+import axios from "axios";
+
 export default {
     components:{
         SideNavigation, TabsReading, CardReadingText,
@@ -36,23 +38,32 @@ export default {
 
     data(){
         return{
-            cardTitle: "Time to Relax", 
+            
+            textContent: "",
 
             // needs to display image in the card
             readingTextImage: readingTextImage,
-
-            // dynamically adding a related reading text to the card
-            readingText:`Come and join our lunchtime yoga class with experienced yoga teacher Divya Bridge!
-            When? Every Tuesday at 1.30 p.m.
-            Where? Meeting Room 7
-            How much? £10 for four 30-minute classes.
-            What to bring? Comfortable clothes. Divya will provide the yoga mats.
-            How to join? Write to Sam at Sam.Holden@example.com
-            We can only take a maximum of 20 in the room, so book now!`, 
             
             audioSource: audioFile, 
         };
     },
+
+    methods:{
+        getReadingText(){
+            axios.get("http://localhost:8081/challenge/1")
+            .then((response) => {
+                this.textContent = response.data;
+                // console.log(this.textContent);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        },
+    },
+
+    mounted() {
+        this.getReadingText();
+    }
 }
 </script>
 
