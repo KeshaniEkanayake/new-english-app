@@ -8,56 +8,42 @@
         
         <!-- answers -->
         <table>
-          <tr>
-            <td><ButtonAnswer answer="1)  Tuesday"/></td>
-            <td><ButtonAnswer answer="2)  comfortable"/></td>
-            <td><ButtonAnswer answer="3)  four"/></td>
+          <tr v-if=" firstTaskContent">
+            <td><ButtonAnswer :answer="'1) '+firstTaskContent.answers[0]"/></td>
+            <td><ButtonAnswer :answer="'2) '+firstTaskContent.answers[1]"/></td>
+            <td><ButtonAnswer :answer="'3) '+firstTaskContent.answers[2]"/></td>
           </tr>
 
-          <tr>
-            <td><ButtonAnswer answer="4)  now"/></td>
-            <td><ButtonAnswer answer="5)  2.00 p.m"/></td>
-            <td><ButtonAnswer answer="6)  an email"/></td>
+          <tr v-if=" firstTaskContent">
+            <td><ButtonAnswer :answer="'4) '+firstTaskContent.answers[3]"/></td>
+            <td><ButtonAnswer :answer="'5) '+firstTaskContent.answers[4]"/></td>
+            <!-- <td><ButtonAnswer :answer="firstTaskContent.answers[]"/></td> -->
           </tr>
         </table>
         <br><br>
 
         <!-- questions -->
         <table class="table-data-style">
-          <tr>
-            <td>1. Which day of the week does the Yoga class take place?</td>
-            <td><InputAnswer/></td>
-          </tr>
-
-          <tr>
-            <td>2. How many classes can you take for £10?</td>
-            <td><InputAnswer/></td>
-          </tr>
-
-          <tr>
-            <td>3. What time will the class end?</td>
-            <td><InputAnswer/></td>
-          </tr>
-
-          <tr>
-            <td>4. What kind of clothes do you need to where to the class?</td>
-            <td><InputAnswer/></td>
-          </tr>
-
-          <tr>
-            <td>5. What do you need to send to Sam if you want to join?</td>
-            <td><InputAnswer/></td>
+          <tr v-for="(question, index) in firstTaskContent.questions" :key="index">
+            <td>{{ question.questionContent }}</td>
+            <td>
+              <input
+                type="text"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                maxlength="1"
+                @input="updateAnswer(question.questionId, firstTaskContent.answers[parseInt($event.target.value)-1])" 
+                class="inputbox-style"
+              >
+            </td>
           </tr>
         </table>
 
         <br>
-        <div class="center-item">
+        <div class="center-item" @click="checkForAnswers">
           <ButtonCheck/>
         </div>
       </n-tab-pane>
-
-
-
 
 
       <!-- task 2 tab -->
@@ -65,34 +51,21 @@
         <h3>Decide whether the given statements are true or false</h3>
 
         <table class="td-style">
-          <tr>
-            <td>1. Sam Holden is the Yoga teacher</td>
-            <td><RadioTrueFalse/></td>
+
+          <tr v-for="(question, index) in secondTaskContent.questions" :key="index">
+            <td>{{ question.questionContent }}</td>
+            <td>
+              <RadioTrueFalse
+                :questionIndex="index"
+                :emitValue="handleRadioValue"
+              />
+            </td>
           </tr>
 
-          <tr>
-            <td>2. The Yoga class is once a week</td>
-            <td><RadioTrueFalse/></td>
-          </tr>
-
-          <tr>
-            <td>3. The class is at lunch time in room 7</td>
-            <td><RadioTrueFalse/></td>
-          </tr>
-
-          <tr>
-            <td>4. You need to bring yoga mats to the class</td>
-            <td><RadioTrueFalse/></td>
-          </tr>
-
-          <tr>
-            <td>5. The class cannot take 22 people</td>
-            <td><RadioTrueFalse/></td>
-          </tr>
         </table>
 
         <br>
-        <div class="center-item">
+        <div class="center-item" @click="checkForSecondAnswers">
           <ButtonCheck/>
         </div>
       </n-tab-pane>
@@ -104,17 +77,90 @@
 
 <script>
 import ButtonAnswer from "@/components/ButtonAnswer.vue"
-import InputAnswer from "@/components/InputAnswer.vue"
+// import InputAnswer from "@/components/InputAnswer.vue"
 import ButtonCheck from "@/components/ButtonCheck.vue"
 import RadioTrueFalse from "@/components/RadioTrueFalse.vue"
+import axios from "axios"
+import { defineComponent } from "vue";
 
-export default{
+export default defineComponent({
   components:{
-    ButtonAnswer, InputAnswer, ButtonCheck, RadioTrueFalse,
-  }
-}
+    ButtonAnswer, ButtonCheck, RadioTrueFalse,
+  },
 
+  data(){
+    return{
+      firstTaskContent: "",
+      secondTaskContent: "",
+      firstTaskAnswers: {},
+      firstTaskAnswersCheck: true,
+      secondTaskAnswers: {},
+      secondTaskAnswersCheck: true,
+    };
+  },
 
+  methods: {
+    getReadingText(){
+        axios.get("http://localhost:8081/challenge/1")
+        .then((response) => {
+          this.firstTaskContent = response.data.tasks[0];
+          this.secondTaskContent = response.data.tasks[1];
+          console.log(this.secondTaskContent);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+
+    updateAnswer(questionId, value) {
+      // Update the firstTaskAnswers object with the new value
+      this.$data.firstTaskAnswers[questionId] = value;
+      // console.log(this.$data.firstTaskAnswers);
+    },
+
+    checkForAnswers(){
+      console.log(this.firstTaskAnswers);
+      var id = 1;
+       for(const questionId in this.firstTaskContent.questions){
+        //  console.log(this.firstTaskContent.questions[questionId].correctAnswer+" "+this.firstTaskAnswers[id])
+        if(this.firstTaskContent.questions[questionId].correctAnswer != this.firstTaskAnswers[id]){
+          // console.log(this.firstTaskContent.questions[questionId].correctAnswer+" "+this.firstTaskAnswers[id]);
+          this.firstTaskAnswersCheck = false;
+        }
+
+         id++;
+         console.log(this.firstTaskAnswersCheck);
+       }
+    },
+
+    handleRadioValue({ index, value }) {
+      // Update the selectedValues array with the received value and index
+      this.secondTaskAnswers[index] = value;
+    },
+
+    checkForSecondAnswers(){
+      console.log(this.secondTaskAnswers);
+      var id = 0;
+      for(const questionId in this.secondTaskContent.questions){
+      // console.log(this.secondTaskContent.questions[questionId].correctAnswer+" "+this.secondTaskAnswers[id])
+         if(this.secondTaskContent.questions[questionId].correctAnswer != this.secondTaskAnswers[id]){
+      //     // console.log(this.firstTaskContent.questions[questionId].correctAnswer+" "+this.firstTaskAnswers[id]);
+           this.secondTaskAnswersCheck = false;
+         }
+
+          id++;
+          console.log(this.secondTaskAnswersCheck);
+      }
+
+    }
+
+  },
+
+  mounted() {
+    this.getReadingText();
+  },
+
+});
 
 </script>
 
@@ -142,5 +188,7 @@ export default{
 .table-data-style{
   text-align: left;
 }
-
+.inputbox-style{
+  width: 50px;
+}
 </style>
