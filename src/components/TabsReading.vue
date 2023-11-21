@@ -66,8 +66,8 @@
         </table>
 
         <br />
-        <div class="center-item" @click="checkForAnswers">
-          <ButtonCheck />
+        <div class="center-item">
+          <ButtonCheck @click="checkForAnswers"/>
         </div>
       </n-tab-pane>
 
@@ -85,8 +85,8 @@
         </table>
 
         <br />
-        <div class="center-item" @click="checkForSecondAnswers">
-          <ButtonCheck />
+        <div class="center-item">
+          <ButtonCheck @click="checkForSecondAnswers"/>
         </div>
       </n-tab-pane>
     </n-tabs>
@@ -161,6 +161,8 @@ export default defineComponent({
           break;
         }
         id++;
+      }
+      if (this.firstTaskAnswersCheck) {
         this.handleCorrectAnswer();
       }
     },
@@ -181,6 +183,8 @@ export default defineComponent({
           break;
         }
         id++;
+      }
+      if (this.secondTaskAnswersCheck) {
         this.handleCorrectAnswer();
       }
     },
