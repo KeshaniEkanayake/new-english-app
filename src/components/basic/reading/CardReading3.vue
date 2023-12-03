@@ -10,7 +10,7 @@
         <h3>{{subTopic1}}</h3>
             <p class="para-style"> {{ readingText1 }}</p>
         
-            
+             
          <h3>{{subTopic2}}</h3>
             <p class="para-style"> {{ readingText2 }}</p>
 
