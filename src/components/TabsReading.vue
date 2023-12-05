@@ -147,20 +147,17 @@ export default defineComponent({
     updateAnswer(questionId, value) {
       // Update the firstTaskAnswers object with the new value
       this.$data.firstTaskAnswers[questionId] = value;
-      // console.log(this.$data.firstTaskAnswers);
     },
 
     checkForAnswers() {
-      console.log(this.firstTaskAnswers);
-      var id = 1;
-      for (const questionId in this.firstTaskContent.questions) {
-        if (this.firstTaskContent.questions[questionId].correctAnswer != this.firstTaskAnswers[id]) {
-          // console.log(this.firstTaskContent.questions[questionId].correctAnswer+" "+this.firstTaskAnswers[id]);
+      for (const qId in this.firstTaskContent.questions) {
+        console.log(qId);
+        const question = this.firstTaskContent.questions[qId];
+        if (question.correctAnswer != this.firstTaskAnswers[question.questionId]) {
           this.firstTaskAnswersCheck = false;
           this.handleWrongAnswer();
           break;
         }
-        id++;
       }
       if (this.firstTaskAnswersCheck) {
         this.handleCorrectAnswer();
