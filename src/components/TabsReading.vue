@@ -170,16 +170,13 @@ export default defineComponent({
     },
 
     checkForSecondAnswers() {
-      console.log(this.secondTaskAnswers);
-      var id = 0;
       for (const questionId in this.secondTaskContent.questions) {
-        if (this.secondTaskContent.questions[questionId].correctAnswer != this.secondTaskAnswers[id]) {
+        if (this.secondTaskContent.questions[questionId].correctAnswer.toLowerCase() != this.secondTaskAnswers[questionId]) {
           // console.log(this.firstTaskContent.questions[questionId].correctAnswer+" "+this.firstTaskAnswers[id]);
           this.secondTaskAnswersCheck = false;
           this.handleWrongAnswer();
           break;
         }
-        id++;
       }
       if (this.secondTaskAnswersCheck) {
         this.handleCorrectAnswer();
